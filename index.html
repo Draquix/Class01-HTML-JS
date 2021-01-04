@@ -1,1 +1,68 @@
-
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>First Class HTML/Javasript Assignment</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <style>
+            header {
+                background-color: black;
+                color: red;
+                text-align: center;
+                text-shadow: 3px 3px 3px purple;
+                padding: 4px;
+                margin: 0px;
+            }
+            body {
+                background-color: slategray;
+            }
+            main {
+                margin:0px;
+                background-color: green;
+            }
+            footer {
+                background-color:black;
+                color: blue;
+                text-align: center;
+                padding: 1px;
+                margin: 0px;
+            }
+        </style>
+    </head>
+    <body>
+        <header>
+            <h1> Class 01 of Code 201, First Assignment</h1>
+        </header>
+        <aside>
+        </aside>
+        <main>
+            <p style="color:blue">What is your first name?</p>
+            <p style="color:magenta">What is your last name?</p>
+            <p id= "name-port">Name goes here.</p>
+            <p style="color:maroon">What is your favorite book?</p>
+            <p style= "color:mediumturquoise">Who is the author?</p>
+            <p id= "book-port">Book and author goes here.</p>
+        </main>
+        <footer>
+            <h6> Last Updated on 01/04/2021 </h6>
+        </footer>
+       
+        <script>
+            var firstName = prompt("What is your first name?");
+            var lastName = prompt("Hello, "+ firstName + " what is your last name?");
+            console.log("The name entered was: "+ firstName + " " + lastName);
+            var displayName = document.getElementById("name-port");
+            displayName.innerHTML = "     The name entered is: " + firstName + " " + lastName;
+            var favoriteBook = prompt("What is the best book you've ever read, Mr./Mrs. " + lastName + "?");
+            console.log("The book entered was: " + favoriteBook);
+            var bookAuthor = prompt("Who wrote " + favoriteBook + "?");
+            console.log("The author entered was: " + bookAuthor);
+            var displayBook = document.getElementById("book-port");
+            alert("So, " + firstName + " " +  lastName + " is your name, and your favorite book is " + favoriteBook + " by " + bookAuthor + ".")
+            displayBook.innerHTML = "     The book entered is: " + favoriteBook + ", by " + bookAuthor;
+        </script>
+    
+    </body>
+</html>
